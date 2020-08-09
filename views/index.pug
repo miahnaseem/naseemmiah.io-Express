@@ -1,0 +1,72 @@
+doctype html
+html(lang='en')
+ head
+   title Hello, World!
+
+   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+    integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
+   script(src="https://code.jquery.com/jquery-2.2.4.js", integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=", crossorigin="anonymous")
+ body
+
+  // Nav Practice
+  nav#navbar-default
+    .container-fluid.pt-5
+      .navbar-header
+        a.navbar-brand(href='/') Naseem Miah
+      ul.nav.navbar-nav
+        li
+          a(href="/") Home  
+        li
+          a(href='/page-1') Page 1
+        li
+          a(href='/page-2') Page 2
+      input.search(
+        type='text'
+        name='search'
+        placeholder='Enter a search term...'
+      )
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#0')
+            | Log in
+
+  .container
+    h2 Home
+
+    p. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+
+    p.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+
+    .input-group.input-group-lg
+      .input-group-prepend
+        span.input-group-text#input-js-practice Enter your name please
+      input.form-control#searchTxt(
+        type='text/js'
+        aria-label='JS example input'
+        aria-describedby="input-js-practice"
+      )
+
+    div#postInput
+
+    script.
+      const node = document.getElementById("searchTxt")
+      node.addEventListener("keyup", ({key}) => {
+        if (key === 'Enter') {
+          console.log("fired")
+          const myNewP = document.createElement("p")
+          const name = document.getElementById("searchTxt").value
+          console.log(name)
+          myNewP.innerText = "Hello " + name
+          const postInput = document.getElementById("postInput")
+          postInput.appendChild(myNewP)
+        }
+      })
+      
