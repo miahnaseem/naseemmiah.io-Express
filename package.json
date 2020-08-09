@@ -1,0 +1,19 @@
+{
+  "name": "naseemmiah.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miahnaseem/naseemmiah.io.git"
+  },
+  "author": "Naseem Miah (github.com/miahnaseem)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miahnaseem/naseemmiah.io/issues"
+  },
+  "homepage": "https://github.com/miahnaseem/naseemmiah.io#readme"
+}
