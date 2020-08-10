@@ -3,27 +3,34 @@ html(lang='en')
  head
    title Hello, World!
 
-   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
-    integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
-   script(src="https://code.jquery.com/jquery-2.2.4.js", integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=", crossorigin="anonymous")
+   link(rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
+   script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
+   script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", crossorigin="anonymous")
+   script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous")
+   script(src="https://kit.fontawesome.com/936a38ae8b.js" crossorigin="anonymous")
+ 
  body
-
-  // Nav Practice
-  nav#navbar-default
-    .container-fluid.pt-5
-      .navbar-header
-        a.navbar-brand(href='/') Naseem Miah
-      ul.nav.navbar-nav
-        li
-          a(href="/") Home  
-        li
-          a(href='/page-1') Page 1
-        li
-          a(href='/page-2') Page 2
-      ul.nav.navbar-nav.navbar-right
-        li
-          a(href='#0')
-            | Log in
+  .container-fluid
+    nav.navbar.navbar-expand-sm.navbar-light.bg-light
+      .container
+        a.navbar-brand(href='home') Naseem Miah
+        button.navbar-toggler(
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar1"
+        )
+          i.fas.fa-bars
+        .collapse.navbar-collapse#navbar1
+          ul.nav.navbar-nav.nav-fill.w-75
+            li.nav-item
+              a.nav-link(href="home") Home  
+            li.nav-item
+              a.nav-link(href='portfolio') Portfolio
+            li.nav-item
+              a.nav-link(href='contact') Contact
+          ul.nav.navbar-nav.navbar-right
+            li.nav-item
+              a.nav-link(href='about') About Me
       //- input.search.navbar-right(
       //-   type='text'
       //-   name='search'
@@ -32,7 +39,7 @@ html(lang='en')
       //- )
       
 
-  .container
+  .container.pt-5
     h2 Home
 
     p. 
@@ -49,24 +56,35 @@ html(lang='en')
 
     .input-group.input-group-lg
       .input-group-prepend
-        span.input-group-text#input-js-practice Enter your name please
+        span.input-group-text#enterName Enter your name please
       input.form-control#searchTxt(
         type='text/js'
-        aria-label='JS example input'
-        aria-describedby="input-js-practice"
+        aria-label='Enter name in box'
+        aria-describedby="enterName"
       )
 
     div#postInput
 
     script.
+      const removeElement = elementId => {
+        const element = document.getElementById(elementId)
+        element.parentNode.removeChild(element)
+      }
+
       const node = document.getElementById("searchTxt")
       node.addEventListener("keyup", ({key}) => {
         if (key === 'Enter') {
           console.log("fired")
+          const oldP = document.getElementById("printedName")
+          if (oldP != null) {
+            removeElement("printedName")
+          }
+
           const myNewP = document.createElement("p")
           const name = document.getElementById("searchTxt").value
           console.log(name)
           myNewP.innerText = "Hello " + name
+          myNewP.setAttribute("Id", "printedName")
           const postInput = document.getElementById("postInput")
           postInput.appendChild(myNewP)
         }

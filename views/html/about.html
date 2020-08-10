@@ -26,52 +26,8 @@
         </div>
       </nav>
     </div>
-    <div class="container pt-5">
-      <h2>Home</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-        
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-        
-      </p>
-      <div class="input-group input-group-lg">
-        <div class="input-group-prepend"><span class="input-group-text" id="enterName">Enter your name please</span></div>
-        <input class="form-control" id="searchTxt" type="text/js" aria-label="Enter name in box" aria-describedby="enterName">
-      </div>
-      <div id="postInput"></div>
-      <script>
-        const removeElement = elementId => {
-          const element = document.getElementById(elementId)
-          element.parentNode.removeChild(element)
-        }
-        
-        const node = document.getElementById("searchTxt")
-        node.addEventListener("keyup", ({key}) => {
-          if (key === 'Enter') {
-            console.log("fired")
-            const oldP = document.getElementById("printedName")
-            if (oldP != null) {
-              removeElement("printedName")
-            }
-        
-            const myNewP = document.createElement("p")
-            const name = document.getElementById("searchTxt").value
-            console.log(name)
-            myNewP.innerText = "Hello " + name
-            myNewP.setAttribute("Id", "printedName")
-            const postInput = document.getElementById("postInput")
-            postInput.appendChild(myNewP)
-          }
-        })
-      </script>
+    <div class="container pt-4">
+      <p class="col-md-8">I was born October 17, 1998. On the same day, 2016, the Hubble Telescope discovered the Cartwheel galaxy.</p><img class="col-md-4" src="https://imagine.gsfc.nasa.gov/hst_bday/images/october-17-2019-cartwheel-galaxy.jpg" alt="Image of cartwheel galaxy">
     </div>
   </body>
 </html>
