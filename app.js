@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path')
 
 // app.use(bodyParser.json());
 // app.use('/api/events', events.API);
@@ -7,10 +8,11 @@ const app = express();
 
 app.set('view engine', 'pug');
 
+app.use(express.static(path.join(__dirname, 'views')));
+
 app.get('/', (req, res) => {
   res.render('index');
 });
-
 
 app.get('/home', (req, res) => {
   res.render('index');
