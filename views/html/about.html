@@ -3,6 +3,7 @@
   <head>
     <title>Hello, World!</title>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/about.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -25,42 +26,59 @@
       </nav>
     </div>
     <h2>About Me</h2>
-    <div class="card pt-4" style="width: 25rem;"><img class="card-img-top" src="https://imagine.gsfc.nasa.gov/hst_bday/images/october-17-2019-cartwheel-galaxy.jpg" alt="Image of cartwheel galaxy taken by the Hubble Telescope">
-      <div class="card-body">
-        <h5 class="card-title">My birthday</h5>
-        <p class="card-text">I was born October 17, 1998. On the same day, 1996, Hubble Telescope snapped this picture of the Cartwheel galaxy.</p><a class="btn btn-primary" href="https://www.nasa.gov/content/goddard/what-did-hubble-see-on-your-birthday" target="_blank">Find your birthday discovery</a>
+    <div class="row">
+      <div class="card p-3 col-2" id="card" style="width: 5rem;"><img class="card-img-top" src="https://imagine.gsfc.nasa.gov/hst_bday/images/october-17-2019-cartwheel-galaxy.jpg" alt="Image of cartwheel galaxy taken by the Hubble Telescope">
+        <div class="card-body">
+          <h5 class="card-title">My birthday</h5>
+          <p class="card-text">I was born October 17, 1998. On the same day, 1996, Hubble Telescope snapped this picture of the Cartwheel galaxy.</p><a class="btn btn-primary" href="https://www.nasa.gov/content/goddard/what-did-hubble-see-on-your-birthday" target="_blank">Find your birthday discovery</a>
+        </div>
       </div>
-    </div>
-    <div class="carousel slide" id="captionedCarousel" data-ride="carousel">
-      <div class="container">
-        <ol class="carousel-indicators">
-          <li class="active" data-target="#captionedCarousel" data-slide-to="0"></li>
-          <li data-target="#captionedCarousel" data-slide-to="1"></li>
-          <li data-target="#captionedCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container"><img class="d-block w-75" src="/images/andre-benz-CR0E20Of7yU-unsplash.jpg" alt="Ariel view of New York at night">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Where am I From?</h5>
-                <p>The city that never sleeps, New York</p>
+      <div class="carousel slide col-8" id="captionedCarousel" data-ride="carousel">
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li class="active" data-target="#captionedCarousel" data-slide-to="0"></li>
+            <li data-target="#captionedCarousel" data-slide-to="1"></li>
+            <li data-target="#captionedCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container"><img class="d-block w-100" src="/images/andre-benz-CR0E20Of7yU-unsplash.jpg" alt="Ariel view of New York at night">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Where am I From?</h5>
+                  <p>The city that never sleeps, New York</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container"><img class="d-block w-75" src="/images/clement-h-95YRwf6CNw8-unsplash.jpg" alt="Closeup image of express code">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>What do I do?</h5>
-                <p>Make sites like the one you're viewing now!</p>
+            <div class="carousel-item">
+              <div class="container"><img class="d-block w-100" src="/images/clement-h-95YRwf6CNw8-unsplash.jpg" alt="Closeup image of express code">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>What do I do?</h5>
+                  <p>Make sites like the one you're viewing now!</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container"><img class="d-block w-75" src="/images/priscilla-du-preez-yO12O8j3JK0-unsplash.jpg" alt="Thank you spelled out by scrabble blocks">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Why do I do it?</h5>
-                <p>Because of everyone who provides feedback and support after visiting</p>
+            <div class="carousel-item">
+              <div class="container"><img class="d-block w-100" src="/images/priscilla-du-preez-yO12O8j3JK0-unsplash.jpg" alt="Thank you spelled out by scrabble blocks">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Why do I do it?</h5>
+                  <p>Because of everyone who provides feedback and support after visiting</p>
+                </div>
               </div>
+            </div>
+          </div><a class="carousel-control-prev" href="#captionedCarousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#captionedCarousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="container">
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">What can I do for you?
+                <p class="lead">
+                  I am looking for work and I am hope you're looking for someone that can get the job done.
+                  Please take a look at my project experience under the Portfolio tab, and have a look at my
+                  resume. I might just be what you're looking for :) 
+                </p>
+              </h1>
             </div>
           </div>
         </div>
