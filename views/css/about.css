@@ -11,3 +11,7 @@ h2 {
     background-color: lightgrey;
     margin-left: auto;
 }
+
+.active {
+	font-weight: bold;
+}
