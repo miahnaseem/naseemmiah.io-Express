@@ -19,8 +19,6 @@
               <li class="nav-item"><a class="nav-link" href="home">Home  </a></li>
               <li class="nav-item"><a class="nav-link" href="portfolio">Portfolio</a></li>
               <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
               <li class="nav-item"><a class="nav-link" href="about">About Me</a></li>
             </ul>
           </div>
@@ -28,22 +26,7 @@
       </nav>
     </div>
     <div class="container pt-5">
-      <h2>Home</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-        
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-        
-      </p>
-      <div class="input-group input-group-lg">
+      <div class="input-group input-group-lg pt-4">
         <div class="input-group-prepend"><span class="input-group-text" id="enterName">Enter your name please</span></div>
         <input class="form-control" id="searchTxt" type="text/js" aria-label="Enter name in box" aria-describedby="enterName">
       </div>
@@ -63,13 +46,13 @@
               removeElement("printedName")
             }
         
-            const myNewP = document.createElement("p")
+            const myNewP = document.createElement("h2")
             const name = document.getElementById("searchTxt").value
             console.log(name)
             myNewP.innerText = "Hello " + name
             myNewP.setAttribute("Id", "printedName")
             const postInput = document.getElementById("postInput")
-            postInput.appendChild(myNewP)
+            postInput.appendChild(myNewP).style.padding = '50px'
           }
         })
       </script>

@@ -28,14 +28,55 @@ html(lang='en')
               a.nav-link(href='portfolio') Portfolio
             li.nav-item
               a.nav-link(href='contact') Contact
-          ul.nav.navbar-nav.navbar-right
             li.nav-item
               a.nav-link(href='about') About Me
-    
-  .container.pt-4
-    p.col-md-8.
-      I was born October 17, 1998. On the same day, 2016, the Hubble Telescope discovered the Cartwheel galaxy.
-    img.col-md-4(
-      src = "https://imagine.gsfc.nasa.gov/hst_bday/images/october-17-2019-cartwheel-galaxy.jpg"
-      alt = "Image of cartwheel galaxy"
+
+  h2 About Me
+
+  .card.pt-4(style="width: 25rem;")
+    img.card-img-top(
+      src= "https://imagine.gsfc.nasa.gov/hst_bday/images/october-17-2019-cartwheel-galaxy.jpg"
+      alt= "Image of cartwheel galaxy taken by the Hubble Telescope"
     )
+    .card-body
+      h5.card-title My birthday
+      p.card-text I was born October 17, 1998. On the same day, 1996, Hubble Telescope snapped this picture of the Cartwheel galaxy.
+      a.btn.btn-primary(href="https://www.nasa.gov/content/goddard/what-did-hubble-see-on-your-birthday" target="_blank") Find your birthday discovery
+  
+  .carousel.slide#captionedCarousel(data-ride="carousel")
+    .container
+      ol.carousel-indicators
+        li.active(data-target="#captionedCarousel" data-slide-to="0")
+        li(data-target="#captionedCarousel" data-slide-to="1")
+        li(data-target="#captionedCarousel" data-slide-to="2")
+      .carousel-inner
+        .carousel-item.active
+          .container
+            img.d-block.w-75(
+              src= "/images/andre-benz-CR0E20Of7yU-unsplash.jpg"
+              alt= "Ariel view of New York at night")
+            .carousel-caption.d-none.d-md-block
+              h5 Where am I From?
+              p The city that never sleeps, New York
+        .carousel-item
+          .container
+            img.d-block.w-75(
+              src= "/images/clement-h-95YRwf6CNw8-unsplash.jpg"
+              alt= "Closeup image of express code")
+            .carousel-caption.d-none.d-md-block
+              h5 What do I do?
+              p Make sites like the one you're viewing now!
+        .carousel-item
+          .container
+            img.d-block.w-75(
+              src= "/images/priscilla-du-preez-yO12O8j3JK0-unsplash.jpg"
+              alt= "Thank you spelled out by scrabble blocks")
+            .carousel-caption.d-none.d-md-block
+              h5 Why do I do it?
+              p Because of everyone who provides feedback and support after visiting
+      //- a.carousel-control-prev(href="#captionedCarousel" role="button" data-slide="prev")
+      //-   span.carousel-control-prev-icon(aria-hidden="true")
+      //-   span.sr-only Previous
+      //- a.carousel-control-next(href="#captionedCarousel" role="button" data-slide="next")
+      //-   span.carousel-control-next-icon(aria-hidden="true")
+      //-   span.sr-only Next

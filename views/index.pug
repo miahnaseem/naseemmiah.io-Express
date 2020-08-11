@@ -29,26 +29,23 @@ html(lang='en')
               a.nav-link(href='portfolio') Portfolio
             li.nav-item
               a.nav-link(href='contact') Contact
-          ul.nav.navbar-nav.navbar-right
             li.nav-item
               a.nav-link(href='about') About Me
 
   .container.pt-5
-    h2 Home
+    //- p. 
+    //-   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    //-   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    //-   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    //-   commodo consequat.
 
-    p. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+    //- p.
+    //-   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    //-   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    //-   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    //-   commodo consequat.
 
-    p.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-
-    .input-group.input-group-lg
+    .input-group.input-group-lg.pt-4
       .input-group-prepend
         span.input-group-text#enterName Enter your name please
       input.form-control#searchTxt(
@@ -74,13 +71,13 @@ html(lang='en')
             removeElement("printedName")
           }
 
-          const myNewP = document.createElement("p")
+          const myNewP = document.createElement("h2")
           const name = document.getElementById("searchTxt").value
           console.log(name)
           myNewP.innerText = "Hello " + name
           myNewP.setAttribute("Id", "printedName")
           const postInput = document.getElementById("postInput")
-          postInput.appendChild(myNewP)
+          postInput.appendChild(myNewP).style.padding = '50px'
         }
       })
       
