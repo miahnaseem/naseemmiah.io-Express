@@ -5,6 +5,7 @@ html(lang='en')
 
    link(rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
    link(rel="stylesheet" type="text/css" href="/css/contact.css")
+   script(src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous")
    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous")
    script(src="https://kit.fontawesome.com/936a38ae8b.js" crossorigin="anonymous")
  body
@@ -29,12 +30,45 @@ html(lang='en')
               a.nav-link.active(href='contact') Contact
             li.nav-item
               a.nav-link(href='about') About Me
-        
-  .container.d-flex.justify-content-center
-    .jumbotron.mt-5.shadow-lg.p-3.mb-5.bg-white.rounded
-      h4.display-2 Get in touch!
-      a.btn.btn-primary.btn-lg.d-flex.justify-content-center(href="#0") Email
-      hr
-      a.btn.btn-primary.btn-lg.d-flex.justify-content-center(href="https://github.com/miahnaseem" target="_blank") Github
-      hr
-      a.btn.btn-primary.btn-lg.d-flex.justify-content-center(href="https://twitter.com/LuckyBreeze_" target="_blank") Twitter
+  
+  .container.pt-4.mw-100
+    .row
+      .container.col-lg-4.mt-5
+        .jumbotron.p-3.mb-5.bg-white.rounded
+          h4.display-2 Have some feedback?
+          a.btn.btn-primary.btn-lg.d-flex.justify-content-center(href="#0") Email
+          hr
+          input-form
+            textarea(rows="4" col="100")
+
+      .container.col-lg-4.mt-5
+        .jumbotron.p-3.mb-5.bg-white.rounded
+          h4.display-2.pb-5 Looking for Freelance services?
+          a.btn.btn-success.btn-lg.d-flex.justify-content-center(href="https://www.upwork.com/" target="_blank") Upwork          
+          hr
+          a.btn.btn-success.btn-lg.d-flex.justify-content-center(href="https://www.fiverr.com/" target="_blank") Fiverr
+          hr
+          a.btn.btn-success.btn-lg.d-flex.justify-content-center(href="https://twitter.com/LuckyBreeze_" target="_blank") Freelancer
+
+      //Twitter API
+      .container.col-lg-4.mt-5
+        a.twitter-timeline(href="https://twitter.com/LuckyBreeze_"  data-tweet-limit="1") Most recent Tweet
+  
+script.
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+  }(document, "script", "twitter-wjs"))
+    

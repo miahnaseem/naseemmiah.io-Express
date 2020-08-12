@@ -9,7 +9,7 @@ html(lang='en')
    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous")
    script(src="https://kit.fontawesome.com/936a38ae8b.js" crossorigin="anonymous")
  body#bodyId
-  .container-fluid
+  .container-fluid#mouseTarget
     nav.navbar.navbar-expand-md.navbar-light.bg-light
       .container
         a.navbar-brand(href='home') Naseem Miah
@@ -44,31 +44,16 @@ html(lang='en')
     //-   commodo consequat.
 
     script.
-      const removeElement = elementId => {
-        const element = document.getElementById(elementId)
-        element.parentNode.removeChild(element)
-      }
-
       $(document).ready(function () {
         $('div.d-none').fadeIn(1000).removeClass('d-none')
       })
 
-      const node = document.getElementById("searchTxt")
-      node.addEventListener("keyup", ({key}) => {
-        if (key === 'Enter') {
-          console.log("fired")
-          const oldP = document.getElementById("printedName")
-          if (oldP != null) {
-            removeElement("printedName")
-          }
-
-          const myNewP = document.createElement("h2")
-          const name = document.getElementById("searchTxt").value
-          console.log(name)
-          myNewP.innerText = "Hello " + name
-          myNewP.setAttribute("Id", "printedName")
-          const postInput = document.getElementById("postInput")
-          postInput.appendChild(myNewP).style.padding = '50px'
-        }
-      })
-      
+      //- document.querySelectorAll('nav-item').forEach(item => {
+      //-   console.log("added")
+      //-   item.addEventListener('mouseenter', e => {
+      //-   console.log("moused!")
+      //-   const activeNav = document.querySelectorAll('active')
+      //-   $(activeNav).removeClass('active')
+      //-   $(item).addClass('active')     
+      //-   })
+      //- })

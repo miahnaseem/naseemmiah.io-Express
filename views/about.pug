@@ -7,7 +7,6 @@ html(lang='en')
    link(rel="stylesheet" type="text/css" href="/css/about.css")
    script(src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous")
    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous")
-   
    script(src="https://kit.fontawesome.com/936a38ae8b.js" crossorigin="anonymous")
  body
 
@@ -34,7 +33,7 @@ html(lang='en')
 
   .container.pt-4.mw-100
     .row
-      .container.col-md-2.pb-4
+      .container.col-lg-3.pb-4
         .card.p-3.pr-1#card(style="width: 100%;")
           img.card-img-top.img-responsive(
             src= "https://imagine.gsfc.nasa.gov/hst_bday/images/october-17-2019-cartwheel-galaxy.jpg"
@@ -45,48 +44,51 @@ html(lang='en')
             p.card-text I was born October 17, 1998. On the same day, 1996, Hubble Telescope snapped this picture of the Cartwheel galaxy.
             a.btn.btn-primary(href="https://www.nasa.gov/content/goddard/what-did-hubble-see-on-your-birthday" target="_blank") Find your birthday discovery
       
-      .carousel.slide#captionedCarousel.col-md-8.pb-4(data-ride="carousel")
-        .container.pr-0.pl-0
+      .container.col-lg-6.pb-4
+        .carousel.slide.carousel-fade#captionedCarousel(data-ride="carousel")
           ol.carousel-indicators
             li.active(data-target="#captionedCarousel" data-slide-to="0")
             li(data-target="#captionedCarousel" data-slide-to="1")
             li(data-target="#captionedCarousel" data-slide-to="2")
           .carousel-inner
             .carousel-item.active
-              .container
-                img.d-block.w-100(
-                  src= "/images/andre-benz-CR0E20Of7yU-unsplash.jpg"
-                  alt= "Ariel view of New York at night")
-                .carousel-caption.d-none.d-md-block
-                  h5 Where am I From?
-                  p The city that never sleeps, New York
+              img.d-block.w-100(
+                src= "/images/andre-benz-CR0E20Of7yU-unsplash.jpg"
+                alt= "Ariel view of New York at night")
+              .carousel-caption.d-none.d-md-block
+                h5 Where am I From?
+                p The city that never sleeps, NYC
             .carousel-item
-              .container
-                img.d-block.w-100(
-                  src= "/images/clement-h-95YRwf6CNw8-unsplash.jpg"
-                  alt= "Closeup image of express code")
-                .carousel-caption.d-none.d-md-block
-                  h5 What do I do?
-                  p Make sites like the one you're viewing now!
+              img.d-block.w-100(
+                src= "/images/clement-h-95YRwf6CNw8-unsplash.jpg"
+                alt= "Closeup image of express code")
+              .carousel-caption.d-none.d-md-block
+                h5 What do I do?
+                p Make sites like the one you're viewing now!
             .carousel-item
-              .container
-                img.d-block.w-100(
-                  src= "/images/priscilla-du-preez-yO12O8j3JK0-unsplash.jpg"
-                  alt= "Thank you spelled out by scrabble blocks")
-                .carousel-caption.d-none.d-md-block
-                  h5 Why do I do it?
-                  p Because of everyone who provides feedback and support after visiting
+              img.d-block.w-100(
+              src= "/images/priscilla-du-preez-yO12O8j3JK0-unsplash.jpg"
+              alt= "Thank you spelled out by scrabble blocks")
+              .carousel-caption.d-none.d-md-block
+                h5 Why do I do it?
+                p Because of everyone who provides feedback and support after visiting
           a.carousel-control-prev(href="#captionedCarousel" role="button" data-slide="prev")
             span.carousel-control-prev-icon(aria-hidden="true")
             span.sr-only Previous
           a.carousel-control-next(href="#captionedCarousel" role="button" data-slide="next")
             span.carousel-control-next-icon(aria-hidden="true")
             span.sr-only Next
-      .col-md-2.pb-4
-        .jumbotron.jumbotron-fluid.pr-1
+        
+      .col-lg-3.pb-4
+        .jumbotron.jumbotron-fluid
           .container
-            h1.display-5 What can I do for you?
-              p.lead.
-                I am looking for work and I am hope you're looking for someone that can get the job done.
+            h1.display-5.pb-4 What can I do for you?
+              ol.pt-3
+                li Website UI/UX Development
+                li Jquery and/or vanilla Javascript
+                li Web hosting and server management
+                li SEO and website load optimizations
+              p.pt-5.lead.
+                I am looking for work and hoping you're looking for someone that can get the job done.
                 Please take a look at my project experience under the Portfolio tab, and have a look at my
                 resume. I might just be what you're looking for :) 

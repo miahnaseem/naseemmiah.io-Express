@@ -8,10 +8,19 @@ h2 {
 }
 
 #card {
-    background-color: lightgrey;
     margin-left: auto;
 }
 
 .active {
 	font-weight: bold;
+}
+
+.container .jumbotron {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.carousel-caption {
+    right: 5%;
+    text-align: right;
 }
