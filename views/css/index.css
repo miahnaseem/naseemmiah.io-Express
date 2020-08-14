@@ -7,6 +7,12 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	color: white;
+	text-align: center;
+	font-size: 500%;
+	text-shadow: 2px 2px turquoise;
+}
 
 @media screen and (min-width: 771px) {
 	h1 {

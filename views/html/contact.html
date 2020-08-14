@@ -29,7 +29,7 @@
         <div class="container col-xl-4 pt-4">
           <div class="jumbotron p-3 mb-5 bg-white rounded">
             <h4 class="display-3 pb-5">Have some feedback?</h4>
-            <button class="btn btn-primary btn-lg d-flex justify-content-center" data-toggle="modal" data-target="#emailModal" data-whatever="@meh">Email</button>
+            <button class="btn btn-primary btn-lg d-flex justify-content-center" data-toggle="modal" data-target="#emailModal" data-whatever="@meh">Send me a message</button>
             <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="feedbackEmail" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -39,6 +39,10 @@
                   </div>
                   <div class="modal-body">
                     <form>
+                      <div class="form-group">
+                        <label class="col-form-label" for="senderName">Your Name:</label>
+                        <input class="form-control" type="text" id="senderName">
+                      </div>
                       <div class="form-group">
                         <label class="col-form-label" for="senderEmail">Your Email:</label>
                         <input class="form-control" type="text" id="senderEmail">
@@ -56,7 +60,7 @@
                 </div>
               </div>
             </div>
-            <hr><a class="btn btn-primary btn-lg" href="#0">LinkedIn</a>
+            <hr><a class="btn btn-primary btn-lg" href="https://www.linkedin.com/" target="_blank">Visit my LinkedIn</a>
           </div>
         </div>
         <div class="container col-xl-4 pt-4">
