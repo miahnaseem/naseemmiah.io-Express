@@ -26,16 +26,40 @@
     </div>
     <div class="container pt-4 mw-100">
       <div class="row">
-        <div class="container col-lg-4 mt-5">
+        <div class="container col-xl-4 pt-4">
           <div class="jumbotron p-3 mb-5 bg-white rounded">
-            <h4 class="display-2">Have some feedback?</h4><a class="btn btn-primary btn-lg d-flex justify-content-center" href="#0">Email</a>
-            <hr>
-            <input-form>
-              <textarea rows="4" col="100"></textarea>
-            </input-form>
+            <h4 class="display-2 pb-5">Have some feedback?</h4>
+            <button class="btn btn-primary btn-lg d-flex justify-content-center" data-toggle="modal" data-target="#emailModal" data-whatever="@meh">Email</button>
+            <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="feedbackEmail" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackEmail">Email</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label class="col-form-label" for="senderEmail">Your Email:</label>
+                        <input class="form-control" type="text" id="senderEmail">
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label" for="messageText">Message: </label>
+                        <textarea class="form-control" id="messageText"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="button">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr><a class="btn btn-primary btn-lg" href="#0">LinkedIn</a>
           </div>
         </div>
-        <div class="container col-lg-4 mt-5">
+        <div class="container col-xl-4 pt-4">
           <div class="jumbotron p-3 mb-5 bg-white rounded">
             <h4 class="display-2 pb-5">Looking for Freelance services?</h4><a class="btn btn-success btn-lg d-flex justify-content-center" href="https://www.upwork.com/" target="_blank">Upwork          </a>
             <hr><a class="btn btn-success btn-lg d-flex justify-content-center" href="https://www.fiverr.com/" target="_blank">Fiverr</a>
@@ -43,7 +67,7 @@
           </div>
         </div>
         <!--Twitter API-->
-        <div class="container col-lg-4 mt-5"><a class="twitter-timeline" href="https://twitter.com/LuckyBreeze_" data-tweet-limit="1">Most recent Tweet</a></div>
+        <div class="container col-xl-4 pt-4"><a class="twitter-timeline" href="https://twitter.com/LuckyBreeze_" data-tweet-limit="1">Most recent Tweet</a></div>
       </div>
     </div>
   </body>

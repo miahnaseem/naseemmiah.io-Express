@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/miahnaseem/naseemmiah.io/issues"
   },
-  "homepage": "https://github.com/miahnaseem/naseemmiah.io#readme"
+  "homepage": "https://github.com/miahnaseem/naseemmiah.io#readme",
+  "dependencies": {
+    "gh.js": "^3.1.1"
+  }
 }

@@ -7,16 +7,12 @@ h2 {
 	color:white;
 }
 
-#card {
-    margin-left: auto;
-}
-
-.active {
+.nav-link .active {
 	font-weight: bold;
 }
 
 .container .jumbotron {
-    border-radius: 10px;
+    border-radius: 64px;
     background-color: white;
 }
 
@@ -24,3 +20,4 @@ h2 {
     right: 5%;
     text-align: right;
 }
+

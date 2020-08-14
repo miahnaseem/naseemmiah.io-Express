@@ -24,21 +24,62 @@
         </div>
       </nav>
     </div>
-    <div class="container row pt-4 mx-auto" style="width: 50%">
-      <div class="card p-3 text-white bg-dark mb-3" style="width = 5rem;"><img class="card-img-top" src="/images/gedinfo.png" alt="One of my websites">
-        <div class="card-body">
-          <h5 class="card-title">GEDCOM File Analysis</h5>
-          <p class="card-text">Working as an Agile Dev team, made a GEDCOM file reader that catches errors and anomalies in the file.</p><a class="btn btn-primary d-flex justify-content-center" href="https://github.com/miahnaseem/SSW555_DRAIN" target="_blank">Repo</a>
+    <div class="row pt-4 pl-3 pr-3">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card p-3 text-white bg-dark mb-3" style="width = 5rem;"><img class="card-img-top" src="/images/GEDCOMoutput.png" alt="One of my websites">
+              <div class="card-body">
+                <h5 class="card-title">GEDCOM File Analysis</h5>
+                <p class="card-text">Working under an Agile Dev team, we made a GEDCOM file reader that catches errors and anomalies in the file.</p><a class="btn btn-primary d-flex justify-content-center" href="https://github.com/miahnaseem/SSW555_DRAIN" target="_blank">Repo</a>
+              </div>
+            </div>
+            <div class="card p-3 text-white bg-dark mb-3" style="width = 5rem;"><img class="card-img-top" src="/images/CHUGG.png" alt="One of my websites">
+              <div class="card-body">
+                <h5 class="card-title">CHUGGED</h5>
+                <p class="card-text">For my Web Dev I final project, we created a bartending website that facilitated user submissions and accounts.</p><a class="btn btn-primary d-flex justify-content-center" href="https://github.com/tmitche2/cs546" target="_blank">Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">   
+            <div class="card p-3 text-white bg-dark mb-3" style="width = 5rem;"><img class="card-img-top" src="/images/cce-search.png" alt="One of my websites">
+              <div class="card-body">
+                <h5 class="card-title">CCE-Search-Prototype</h5>
+                <p class="card-text">My Senior Capstone, a website to search for uncopyrighted literature. I developed the database and briefly hosted it for our client over on AWS.</p><a class="btn btn-primary d-flex justify-content-center" href="https://github.com/tmitche2/cce-search-prototype" target="_blank">Repo</a>
+              </div>
+            </div>
+            <div class="card p-3 text-white bg-dark mb-3" style="width = 5rem;"><img class="card-img-top" src="/images/patrick-tomasso-QMDap1TAu0g-unsplash.jpg" alt="One of my websites">
+              <div class="card-body">
+                <h5 class="card-title">GEDCOM File Analysis</h5>
+                <p class="card-text">Working as an Agile Dev team, made a GEDCOM file reader that catches errors and anomalies in the file.</p><a class="btn btn-primary d-flex justify-content-center" href="https://github.com/miahnaseem/SSW555_DRAIN" target="_blank">Repo</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container row pt-4 mx-auto" style="width: 50%">
-      <div class="card p-3 text-white bg-dark mb-3" style="width = 5rem;"><img class="card-img-top" src="/images/patrick-tomasso-QMDap1TAu0g-unsplash.jpg" alt="One of my websites">
-        <div class="card-body">
-          <h5 class="card-title">GEDCOM File Analysis</h5>
-          <p class="card-text">Working as an Agile Dev team, made a GEDCOM file reader that catches errors and anomalies in the file.</p><a class="btn btn-primary d-flex justify-content-center" href="https://github.com/miahnaseem/SSW555_DRAIN" target="_blank">Repo</a>
-        </div>
+      <div class="col-md-4">
+        <div class="jumbotron"></div>
       </div>
     </div>
+    <script>
+      const Github = require("gh.js")
+      
+      var gh = new Github()
+      
+      gh.get("users/miahnaseem/events", (err,res) => {
+        if (err) {
+          return console.error(err)
+        }
+      
+        var pushEvents = res.filter(c => {
+          return c.type === "PushEvent"
+        });
+      
+        // Show the date and the repo name
+        console.log(pushEvents.map(c => {
+          return "Pushed at " + c.created_at + " in " + c.repo.name;
+        }).join("\n"))
+      })
+    </script>
   </body>
 </html>

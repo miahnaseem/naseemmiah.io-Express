@@ -33,15 +33,35 @@ html(lang='en')
   
   .container.pt-4.mw-100
     .row
-      .container.col-lg-4.mt-5
+      .container.col-xl-4.pt-4
         .jumbotron.p-3.mb-5.bg-white.rounded
-          h4.display-2 Have some feedback?
-          a.btn.btn-primary.btn-lg.d-flex.justify-content-center(href="#0") Email
-          hr
-          input-form
-            textarea(rows="4" col="100")
+          h4.display-2.pb-5 Have some feedback?
 
-      .container.col-lg-4.mt-5
+          button.btn.btn-primary.btn-lg.d-flex.justify-content-center(data-toggle="modal" data-target="#emailModal" data-whatever="@meh") Email
+          
+          .modal.fade#emailModal(tabindex="-1" aria-labelledby="feedbackEmail" aria-hidden="true")
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  h5.modal-title#feedbackEmail Email
+                  button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+                .modal-body
+                  form
+                    .form-group
+                      label.col-form-label(for="senderEmail") Your Email:
+                      input.form-control(type="text" id="senderEmail")
+                    .form-group
+                      label.col-form-label(for="messageText") Message: 
+                      textarea.form-control#messageText
+                .modal-footer
+                  button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                  button.btn.btn-primary(type="button") Send Message
+          hr
+          
+          a.btn.btn-primary.btn-lg(href="#0") LinkedIn
+
+      .container.col-xl-4.pt-4
         .jumbotron.p-3.mb-5.bg-white.rounded
           h4.display-2.pb-5 Looking for Freelance services?
           a.btn.btn-success.btn-lg.d-flex.justify-content-center(href="https://www.upwork.com/" target="_blank") Upwork          
@@ -51,7 +71,7 @@ html(lang='en')
           a.btn.btn-success.btn-lg.d-flex.justify-content-center(href="https://twitter.com/LuckyBreeze_" target="_blank") Freelancer
 
       //Twitter API
-      .container.col-lg-4.mt-5
+      .container.col-xl-4.pt-4
         a.twitter-timeline(href="https://twitter.com/LuckyBreeze_"  data-tweet-limit="1") Most recent Tweet
   
 script.

@@ -7,6 +7,23 @@ h1 {
 	color:white;
 }
 
+textarea {
+    display: block;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+    width: fit-content;
+    resize: vertical;
+    overflow: auto;
+}
+
+label {
+    font-size: large;
+}
 .active {
 	font-weight: bold;
+}
+
+.jumbotron {
+    border-radius: 5px !important;
 }
