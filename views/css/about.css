@@ -3,11 +3,17 @@ body {
     background-position: 0px -400px;
 }
 
-h2 {
-	color:white;
+
+h1 {
+	text-align: center;
 }
 
-.nav-link .active {
+p#list {
+	font-size: 200%;
+	text-align: center;
+}
+
+.nav-link.active {
 	font-weight: bold;
 }
 
@@ -21,3 +27,8 @@ h2 {
     text-align: right;
 }
 
+#spinner {
+    margin: 0;
+    position: absolute;
+    top: 35%;
+}

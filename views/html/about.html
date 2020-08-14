@@ -50,7 +50,10 @@
           </div>
         </div>
         <div class="container col-xl-6 pb-4">
-          <div class="carousel slide carousel-fade" id="captionedCarousel" data-ride="carousel">
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border text-light" role="status" id="spinner"><span class="sr-only">Loading</span></div>
+          </div>
+          <div class="carousel slide carousel-fade d-none" id="captionedCarousel" data-ride="carousel">
             <ol class="carousel-indicators">
               <li class="active" data-target="#captionedCarousel" data-slide-to="0"></li>
               <li data-target="#captionedCarousel" data-slide-to="1"></li>
@@ -81,19 +84,18 @@
         <div class="col-xl-3 pb-4">
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-5 pb-4">What can I do for you?
-                <ul class="pt-3">
-                  <li>UI/UX</li>
-                  <li>vanilla Js + Jquery</li>
-                  <li>Web hosting</li>
-                  <li>SEO</li>
-                </ul>
+              <h1 class="display-5 pb-3">What can I do for you?</h1><br>
+              <p id="list">UI/UX</p>
+              <p id="list">Vanilla Js + Jquery</p>
+              <p id="list">Web hosting</p>
+              <p id="list">SEO
                 <p class="pt-5 lead">
                   I am looking for work and hoping you're looking for someone that can get the job done.
-                  Please take a look at my project experience under the Portfolio tab, and have a look at my
-                  resume. I might just be what you're looking for :) 
+                  Please take a look at my project experience under the Portfolio tab, and/or request my
+                  résumé. I might just be what you're looking for :) 
+                  
                 </p>
-              </h1>
+              </p>
             </div>
           </div>
         </div>
@@ -101,3 +103,11 @@
     </div>
   </body>
 </html>
+<script>
+  $('document').ready(function () {
+    setTimeout(function () {
+      $('#captionedCarousel').removeClass('d-none')
+      $('#spinner').hide()
+    }, 600)
+  })
+</script>

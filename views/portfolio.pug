@@ -30,71 +30,62 @@ html(lang='en')
               a.nav-link(href='contact') Contact
             li.nav-item
               a.nav-link(href='about') About Me
-
-  .row.pt-4.pl-3.pr-3
-    .col-md-8
-      .row
-        .col-md-6
-          .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
-            img.card-img-top(
-              src = "/images/GEDCOMoutput.png"
-              alt = "One of my websites"
-            )
-            .card-body
-              h5.card-title GEDCOM File Analysis
-              p.card-text Working under an Agile Dev team, we made a GEDCOM file reader that catches errors and anomalies in the file.
-              a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/miahnaseem/SSW555_DRAIN" target="_blank") Repo
-        
-          .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
-            img.card-img-top(
-              src = "/images/CHUGG.png"
-              alt = "One of my websites"
-            )
-            .card-body
-              h5.card-title CHUGGED
-              p.card-text For my Web Dev I final project, we created a bartending website that facilitated user submissions and accounts.
-              a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/tmitche2/cs546" target="_blank") Repo
-      
-        .col-md-6    
-          .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
-            img.card-img-top(
-              src = "/images/cce-search.png"
-              alt = "One of my websites"
-            )
-            .card-body
-              h5.card-title CCE-Search-Prototype
-              p.card-text My Senior Capstone, a website to search for uncopyrighted literature. I developed the database and briefly hosted it for our client over on AWS.
-              a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/tmitche2/cce-search-prototype" target="_blank") Repo
-
-          .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
-            img.card-img-top(
-              src = "/images/patrick-tomasso-QMDap1TAu0g-unsplash.jpg"
-              alt = "One of my websites"
-            )
-            .card-body
-              h5.card-title GEDCOM File Analysis
-              p.card-text Working as an Agile Dev team, made a GEDCOM file reader that catches errors and anomalies in the file.
-              a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/miahnaseem/SSW555_DRAIN" target="_blank") Repo
-    
-    .col-md-4
-      .jumbotron
   
-  script.
-    const Github = require("gh.js")
+  .container.pt-4.mw-100
+    .row
+      .col-md-8
+        .row
+          .col-md-6
+            .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
+              img.card-img-top(
+                src = "/images/GEDCOMoutput.png"
+                alt = "One of my websites"
+              )
+              .card-body
+                h5.card-title GEDCOM File Analysis
+                p.card-text Working as an Agile Development team, we made a GEDCOM file reader that catches errors and anomalies in the file.
+                a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/miahnaseem/SSW555_DRAIN" target="_blank") Repo
+          
+            .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
+              img.card-img-top(
+                src = "/images/CHUGG.png"
+                alt = "One of my websites"
+              )
+              .card-body
+                h5.card-title CHUGGED
+                p.card-text For my Web Dev I final project, we created a bartending website that facilitated user submissions and accounts.
+                a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/tmitche2/cs546" target="_blank") Repo
+        
+          .col-md-6    
+            .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
+              img.card-img-top(
+                src = "/images/cce-search.png"
+                alt = "One of my websites"
+              )
+              .card-body
+                h5.card-title CCE-Search-Prototype
+                p.card-text My Senior Capstone, a website to search for uncopyrighted literature. I developed the database and briefly hosted the site for our client on AWS.
+                a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/tmitche2/cce-search-prototype" target="_blank") Repo
 
-    var gh = new Github()
-
-    gh.get("users/miahnaseem/events", (err,res) => {
-      if (err) {
-        return console.error(err)
-      }
-
-      var pushEvents = res.filter(c => {
-        return c.type === "PushEvent"
-      });
-
-      // Show the date and the repo name
-      console.log(pushEvents.map(c => {
-        return "Pushed at " + c.created_at + " in " + c.repo.name;
-      }).join("\n"))
-    })
+            .card.p-3.text-white.bg-dark.mb-3(style="width = 5rem;")
+              img.card-img-top(
+                src = "/images/homepage.png"
+                alt = "One of my websites"
+              )
+              .card-body
+                h5.card-title This Website!
+                p.card-text A personal side project to keep me up to date with modern web dev infrastructure.
+                a.btn.btn-primary.d-flex.justify-content-center(href="https://github.com/miahnaseem/naseemmiah.io" target="_blank") Repo
+      
+      .col-md-4
+        .jumbotron
+          h4.display-4.pb-3 Request my résumé
+          p Please fill out this short form so I can feel confident about sending my résumé out to you
+            form
+              .form-group
+                label.col-form-label(for="requestEmail") Your Email:
+                input.form-control(type="text" id="requestEmail")
+              .form-group
+                label.col-form-label(for="messageText") Briefly, what are you looking for: 
+                textarea.form-control#messageText
+              button.btn.btn-primary(type="button") Submit

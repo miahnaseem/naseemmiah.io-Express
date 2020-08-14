@@ -2,8 +2,21 @@ body {
 	background-image: url("/images/peter-olexa-Ejgx4k3iryg-unsplash.jpg");
 }
 
-h2 {
+h1 {
 	color: white;
+	text-align: center;
+}
+
+
+@media screen and (min-width: 771px) {
+	h1 {
+		font-size: 1000%;
+	}
+}
+@media screen and (max-width: 770px) {
+	h1 {
+		font-size: 700%;
+	}
 }
 
 .active {

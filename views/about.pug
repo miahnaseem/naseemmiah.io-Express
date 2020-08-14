@@ -55,7 +55,10 @@ html(lang='en')
               a.btn.btn-primary(href="https://www.nasa.gov/content/goddard/what-did-hubble-see-on-your-birthday" target="_blank") Find your birthday discovery
        
       .container.col-xl-6.pb-4
-        .carousel.slide.carousel-fade#captionedCarousel(data-ride="carousel")
+        .d-flex.justify-content-center
+          .spinner-border.text-light(role="status")#spinner
+            span.sr-only Loading
+        .carousel.slide.carousel-fade.d-none#captionedCarousel(data-ride="carousel")
           ol.carousel-indicators
             li.active(data-target="#captionedCarousel" data-slide-to="0")
             li(data-target="#captionedCarousel" data-slide-to="1")
@@ -92,13 +95,21 @@ html(lang='en')
       .col-xl-3.pb-4
         .jumbotron.jumbotron-fluid
           .container
-            h1.display-5.pb-4 What can I do for you?
-              ul.pt-3
-                li UI/UX
-                li vanilla Js + Jquery
-                li Web hosting
-                li SEO
+            h1.display-5.pb-3 What can I do for you?
+            br
+            p#list UI/UX
+            p#list Vanilla Js + Jquery
+            p#list Web hosting
+            p#list SEO
               p.pt-5.lead.
                 I am looking for work and hoping you're looking for someone that can get the job done.
-                Please take a look at my project experience under the Portfolio tab, and have a look at my
-                resume. I might just be what you're looking for :) 
+                Please take a look at my project experience under the Portfolio tab, and/or request my
+                résumé. I might just be what you're looking for :) 
+
+script.
+  $('document').ready(function () {
+    setTimeout(function () {
+      $('#captionedCarousel').removeClass('d-none')
+      $('#spinner').hide()
+    }, 600)
+  })
