@@ -1,17 +1,22 @@
 const express = require('express');
+const serverless = require("serverless-http")
 const app = express();
+const router = express.Router();
 const path = require('path')
 
 // app.use(bodyParser.json());
 // app.use('/api/events', events.API);
 // app.use('/api/forms', forms);
 
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 
-app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname, 'html')));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  // res.render('index');
+  res.json({
+    'hello': 'test'
+  });
 });
 
 app.get('/home', (req, res) => {
@@ -30,8 +35,7 @@ app.get('/portfolio', (req, res) => {
   res.render('about');
  });
 
+app.use('/.netlify/functions/app', router)
 
 
-app.listen(3000, () => {
-  console.log('Listening on port 3000...');
-});
+module.exports.handler = serverless(app);
