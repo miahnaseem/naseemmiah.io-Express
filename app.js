@@ -8,15 +8,14 @@ const path = require('path')
 // app.use('/api/events', events.API);
 // app.use('/api/forms', forms);
 
-// app.engine('pug', require('pug').__express);
-// app.set('views', path.join(__dirname, 'views/html/'));
-// app.set('view engine', 'pug');
+app.engine('pug', require('pug').__express);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
-app.use(express.static(path.join(__dirname, 'html')));
+app.use(express.static(path.join(__dirname, 'views')));
 
 app.get('/', (req, res) => {
-  // res.render('index');
-  res.send("server: I am working");
+  res.render('index');
 });
 
 app.get('/home', (req, res) => {
@@ -44,6 +43,10 @@ app.get('*', function (_, res) { res.json({
 //   res.render("index");
 // });
 
-app.use('/.netlify/functions/app', router)
+// app.use('/.netlify/functions/app', router)
 
-module.exports.handler = serverless(app);
+// module.exports.handler = serverless(app);
+
+app.listen(3000, function () {
+  console.log("Express server listening on port 3000");
+  });
