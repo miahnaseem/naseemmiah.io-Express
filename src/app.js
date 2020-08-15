@@ -1,5 +1,5 @@
 const express = require('express');
-const serverless = require("serverless-http")
+const serverless = require('serverless-http');
 const app = express();
 const router = express.Router();
 const path = require('path')
@@ -8,34 +8,42 @@ const path = require('path')
 // app.use('/api/events', events.API);
 // app.use('/api/forms', forms);
 
+// app.engine('pug', require('pug').__express);
+// app.set('views', path.join(__dirname, 'views/html/'));
 // app.set('view engine', 'pug');
 
 app.use(express.static(path.join(__dirname, 'html')));
 
 app.get('/', (req, res) => {
   // res.render('index');
-  res.json({
-    'hello': 'test'
-  });
+  res.send("server: I am working");
 });
 
 app.get('/home', (req, res) => {
   res.render('index');
- });
+});
 
 app.get('/portfolio', (req, res) => {
   res.render('portfolio');
- });
+});
 
- app.get('/contact', (req, res) => {
+app.get('/contact', (req, res) => {
   res.render('contact');
- });
+});
  
- app.get('/about', (req, res) => {
+app.get('/about', (req, res) => {
   res.render('about');
- });
+});
+
+app.get('*', function (_, res) { res.json({
+  'index' : 'test'
+  });
+});
+
+// app.get('*', (req, res) => {
+//   res.render("index");
+// });
 
 app.use('/.netlify/functions/app', router)
-
 
 module.exports.handler = serverless(app);
